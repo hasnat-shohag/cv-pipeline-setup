@@ -19,6 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+\usepackage[normalem]{ulem}
 
 
 %----------FONT OPTIONS----------
@@ -68,6 +69,13 @@
   }
 }
 
+\newcommand{\customSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, \textit{#2} – #3 & \textit{#4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -83,10 +91,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[1]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -131,17 +139,18 @@
 \section{Professional Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Vivasoft Limited} {Aug. 2024 -- Present}
-      {Software Engineer L-1} {Dhaka, Bangladesh}
+    \customSubheading
+      {Vivasoft Limited} 
+      {Software Engineer L-1} 
+      {Dhaka, Bangladesh}
+      {Aug. 2024 -- Present}
+      
       \resumeItemListStart
-        \resumeItem{-- \textbf{Maxis Invoice (Front-end)} -- Engineered a high-scale centralized billing platform processing and visualizing financial documents across SAP and Kenan systems.}
-        \resumeItem{-- Developed high-throughput PDF generation service with Next.js API routes, generating and uploading \textbf{9M+} monthly billing statements to Google Cloud Platform (GCP).}
-        \resumeItem{-- Improved UI performance by \textbf{3x} and built a real-time financial dashboard, reducing manual tracking effort by $\sim$40\%.}
-        \resumeItem{-- Integrated SAP XML transformer and language mapping service for seamless interoperability between legacy systems and modern web interface.}
-        \resumeItem{-- Technology: TypeScript, Next.js, React-PDF, ApexCharts, Tailwind CSS, Ant Design, GCP.}
+        \resumeItem{-- \textbf{Kothon CX Suite (Front-end)} -- Engineered a comprehensive call analytics dashboard with real-time sentiment scoring, top-topic insights, and dynamic volume visualizations to drive data-driven customer service decisions.}
+        \resumeItem{-- Developed an interactive outbound campaign manager integrated with WebRTC APIs, enabling real-time AI test calls with dynamic payload synthesis for efficient pre-campaign validation.}
+        \resumeItem{-- Optimized client-side performance by building a scalable CSV upload engine with bounded history stack, delivering responsive undo/redo and bulk error resolution.}
       \resumeItemListEnd
-
+      
       \resumeItemListStart
         \resumeItem{-- \textbf{Kothon Calls (Front-end)} -- Led development of centralized outbound call campaign management and voice agent management platform.}
         \resumeItem{-- Implemented Server-Sent Events (SSE) to deliver real-time updates on campaign details and progress.}
@@ -151,12 +160,23 @@
         \resumeItem{-- Technology: TypeScript, React, SSO, Tanstack Table, Tailwind CSS.}
       \resumeItemListEnd
 
-     \resumeSubheading
-    {Vivasoft Limited} {Sep. 2023 -- Feb. 2024}
-    {Software Engineer Intern} {Dhaka, Bangladesh} 
       \resumeItemListStart
-        \resumeItem{Developed key features for \textbf{Vivasoft Contact Management}, an Electron + React application, including record creation, updating, merging, reusable data tables, and dashboard layouts using \textbf{TypeScript} and \textbf{Tailwind CSS}.}
-        \resumeItem{Built secure authentication flows (Login, Sign-Up, Reset Password) with robust form validation using \textbf{react-hook-form} and \textbf{Yup} schemas for reliable API integration.}
+        \resumeItem{-- \textbf{Maxis Invoice (Front-end)} -- Engineered a high-scale centralized billing platform processing and visualizing financial documents across SAP and Kenan systems.}
+        \resumeItem{-- Developed high-throughput PDF generation service with Next.js API routes, generating and uploading \textbf{9M+} monthly billing statements to Google Cloud Platform (GCP).}
+        \resumeItem{-- Improved UI performance by \textbf{3x} and built a real-time financial dashboard, reducing manual tracking effort by $\sim$40\%.}
+        \resumeItem{-- Integrated SAP XML transformer and language mapping service for seamless interoperability between legacy systems and modern web interface.}
+        \resumeItem{-- Technology: TypeScript, Next.js, React-PDF, ApexCharts, Tailwind CSS, Ant Design, GCP.}
+      \resumeItemListEnd
+
+
+    \customSubheading
+      {Vivasoft Limited}
+      {Software Engineer Intern}
+      {Dhaka, Bangladesh}
+      {Sep. 2023 -- Feb. 2024}
+      \resumeItemListStart
+        \resumeItem{-- Developed key features for \textbf{Vivasoft Contact Management}, an \textbf{Electron} + React application, including record creation, updating, merging, reusable data tables, and dashboard layouts using \textbf{TypeScript} and \textbf{Tailwind CSS}.}
+        \resumeItem{-- Built secure authentication flows (Login, Sign-Up, Reset Password) with robust form validation using react-hook-form and schemas for reliable API integration.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -165,15 +185,15 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
+        {\textbf{\href{https://chromewebstore.google.com/detail/chatgpt-enhancer/hbippgjekfemnkhnnmlblbildgdfafoe}{\uline{ChatGPT Enhancer}}} $|$ \emph{TypeScript, React, Plasmo}}
+        \resumeItemListStart
+          \resumeItem{Built a Chrome extension with collapsible responses, timeline navigation, and bulk message controls to organize long ChatGPT conversations, achieving \textbf{148 active users}.}
+        \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{\href{https://www.npmjs.com/package/avro-bangla-suggestions}{\uline{avro-bangla-suggestions}}} $|$ \emph{TypeScript, React}}
+        \resumeItemListStart
+          \resumeItem{Lightweight npm package providing a React hook for real-time Avro phonetic Bangla suggestions and autocomplete with keyboard navigation and minimal bundle size.}
+        \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
