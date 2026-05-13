@@ -62,3 +62,4 @@ INSTRUCTIONS:
 OUTPUT:
 - Clean CV-ready bullet points (no explanations)
 - Use consistent formatting (like the provided examples)
+- Make the bullet points short, concise and impactful and business-oriented
