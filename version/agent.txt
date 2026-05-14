@@ -19,7 +19,7 @@ INSTRUCTIONS:
    - Detect real-time systems, scalability work, or architecture decisions
 
 2. Group related commits into meaningful features/projects.
-
+   
 3. For each feature, generate bullet points following this structure:
    - Start with strong action verbs: "Led", "Engineered", "Developed", "Implemented", "Built", "Optimized"
    - Focus on business impact, not just implementation
